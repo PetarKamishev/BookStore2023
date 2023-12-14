@@ -1,5 +1,7 @@
 using BookStore2023.DL.Interfaces;
 using BookStore2023.DL.Repositories;
+using BookStore2023.BL.Services;
+using BookStore2023.BL.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IBookRepository, BookRepository>();
+builder.Services.AddSingleton<IBookService, BookService>();
+
 
 var app = builder.Build();
 
