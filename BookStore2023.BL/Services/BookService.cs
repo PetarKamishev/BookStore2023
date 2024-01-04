@@ -35,5 +35,11 @@ namespace BookStore2023.BL.Services
         {
             _bookRepository.UpdateBook(book);
         }
+        public List<Book> GetAllByAuthorAfterReleaseDate(int authorId, DateTime afterDate)
+        {
+            var result = _bookRepository.GetAllByAuthorAfterReleaseDate(authorId, afterDate);
+            return result.Where(b => b.ReleaseDate >= afterDate).ToList();
+
+        }
     }
 }

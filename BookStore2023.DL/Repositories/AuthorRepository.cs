@@ -26,7 +26,7 @@ namespace BookStore2023.DL.Repositories
 
         public Author? GetAuthor(int id)
         {
-            return StaticData.Authors.FirstOrDefault(b => b.Id == id);
+            return InMemoryDb.StaticData.Authors.FirstOrDefault(b => b.Id == id);
         }
 
         public void UpdateAuthor(Author author)

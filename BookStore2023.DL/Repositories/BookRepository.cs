@@ -37,5 +37,10 @@ namespace BookStore2023.DL.Repositories
 
             existingbook.Title = book.Title;
         }
+
+        public List<Book> GetAllByAuthorAfterReleaseDate(int authorId, DateTime afterDate)
+        {
+            return InMemoryDb.StaticData.Books.Where(b=>b.AuthorId==authorId).ToList();
+        }
     }
 }

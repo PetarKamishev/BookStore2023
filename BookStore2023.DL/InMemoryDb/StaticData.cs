@@ -9,17 +9,31 @@ namespace BookStore2023.DL.InMemoryDb
             new Book()
             {
                 Id=1,
-                Title="Book 1"
+                Title="Book 1",
+                AuthorId=1,
+                ReleaseDate= new DateTime(2005, 05, 07)
+            },
+             new Book()
+            {
+                Id=4,
+                Title="Book 4",
+                AuthorId=1,
+                ReleaseDate=new DateTime(2007, 05, 07)
+              
             },
             new Book()
             {
                 Id=2,
-                Title="Book 2"
+                Title="Book 2",
+                AuthorId=2,
+                ReleaseDate=new DateTime(2015, 05, 06)
             },
             new Book()
             {
                 Id=3,
-                Title="Book 3"
+                Title="Book 3",
+                AuthorId=3,
+                ReleaseDate=new DateTime(2018, 08, 15)
             }
         };
 

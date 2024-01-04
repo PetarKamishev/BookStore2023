@@ -16,6 +16,7 @@ builder.Services.AddSingleton<IBookRepository, BookRepository>();
 builder.Services.AddSingleton<IBookService, BookService>();
 builder.Services.AddSingleton<IAuthorRepository, AuthorRepository>();
 builder.Services.AddSingleton<IAuthorService, AuthorService>();
+builder.Services.AddSingleton<ILibraryService, LibraryService>();
 
 var app = builder.Build();
 

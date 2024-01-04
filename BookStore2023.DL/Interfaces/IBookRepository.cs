@@ -14,5 +14,7 @@ namespace BookStore2023.DL.Interfaces
 
         public List<Book> GetAllBooks();
 
+        public List<Book> GetAllByAuthorAfterReleaseDate(int authorId, DateTime afterDate);
+
     }
 }
