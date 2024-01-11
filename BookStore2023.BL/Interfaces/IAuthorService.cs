@@ -1,18 +1,16 @@
-﻿using BookStore2023.Models.Models;
+﻿
+using BookStore2023.Models.Models;
 
 namespace BookStore2023.BL.Interfaces
 {
     public interface IAuthorService
     {
-        public void AddAuthor(Author author);
+        List<Author> GetAll();
 
-        public void UpdateAuthor(Author author);
+        Author GetById(int id);
 
-        public void DeleteAuthor(int id);
+        void Add(Author author);
 
-        public Author? GetAuthor(int id);
-
-        public List<Author> GetAllAuthors();
-
+        void Remove(int id);
     }
 }

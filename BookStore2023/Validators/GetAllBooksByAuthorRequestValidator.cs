@@ -3,7 +3,7 @@ using BookStore2023.Models.Requests;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 
-namespace BookStore2023.BL.Interfaces
+namespace BookStore2023.Validators
 {
     public class GetAllBooksByAuthorRequestValidator: AbstractValidator<GetAllBooksByAuthorRequest>
     {

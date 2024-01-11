@@ -23,7 +23,10 @@ internal class Program
         builder.Services.AddSingleton<IAuthorRepository, AuthorRepository>();
         builder.Services.AddSingleton<IAuthorService, AuthorService>();
         builder.Services.AddSingleton<ILibraryService, LibraryService>();
-
+        builder.Services.AddFluentValidationAutoValidation();
+        builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
+        builder.Services.AddHealthChecks();
+        builder.Services.AddHealthChecks().AddCheck<CustomHealthCheck>(nameof(CustomHealthCheck));
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -32,15 +35,9 @@ internal class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-        builder.Services
-                        .AddFluentValidationAutoValidation()
-                        .AddFluentValidationClientsideAdapters();
-        builder.Services
-            .AddValidatorsFromAssemblyContaining(typeof(Program));
+        
 
-        builder.Services.AddHealthChecks();
-        builder.Services.AddHealthChecks()
-            .AddCheck<CustomHealthCheck>(nameof(CustomHealthCheck));
+       
             
         app.UseHttpsRedirection();
 

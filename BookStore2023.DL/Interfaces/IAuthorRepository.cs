@@ -1,22 +1,17 @@
 ﻿using BookStore2023.Models.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BookStore2023.DL.Interfaces
+
+namespace BookStore2023.BL.Interfaces
 {
-    public interface IAuthorRepository
+    public interface IAuthorService
     {
-        public void AddAuthor(Author author);
+        List<Author> GetAll();
 
-        public void UpdateAuthor(Author author);
+        Author GetById(int id);
 
-        public void DeleteAuthor(int id);
+        void Add(Author author);
 
-        public Author? GetAuthor(int id);
-
-        public List<Author> GetAllAuthors();
+        void Remove(int id);
     }
 }

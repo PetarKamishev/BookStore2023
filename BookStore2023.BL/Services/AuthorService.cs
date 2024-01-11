@@ -1,5 +1,8 @@
 ﻿using BookStore2023.BL.Interfaces;
 using BookStore2023.DL.Interfaces;
+using BookStore2023.Models.Models.Users;
+using BookStore2023.BL.Interfaces;
+using BookStore2023.DL.Interfaces;
 using BookStore2023.Models.Models;
 
 namespace BookStore2023.BL.Services
@@ -7,33 +10,32 @@ namespace BookStore2023.BL.Services
     public class AuthorService : IAuthorService
     {
         private readonly IAuthorRepository _authorRepository;
+
         public AuthorService(IAuthorRepository authorRepository)
         {
             _authorRepository = authorRepository;
         }
-        public void AddAuthor  (Author author)
+
+        public List<Author> GetAll()
         {
-            _authorRepository.AddAuthor(author);
+            return _authorRepository.GetAll();
         }
 
-        public void DeleteAuthor(int id)
+        public Author GetById(int id)
         {
-            _authorRepository.DeleteAuthor(id);
+            if (id > 50000) return null;
+
+            return _authorRepository.GetById(id);
         }
 
-        public List<Author> GetAllAuthors()
+        public void Add(Author author)
         {
-            return _authorRepository.GetAllAuthors();
+            _authorRepository.Add(author);
         }
 
-        public Author? GetAuthor(int id)
+        public void Remove(int id)
         {
-            return _authorRepository.GetAuthor(id);
-        }
-
-        public void UpdateAuthor(Author author)
-        {
-            _authorRepository.UpdateAuthor(author);
+            _authorRepository.Remove(id);
         }
     }
 }
