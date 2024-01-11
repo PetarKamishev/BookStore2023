@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore2023", "BookStore2023.csproj", "{6C2AA299-D80C-4C46-BED1-B0D0986FDD22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore", "BookStore.csproj", "{6C2AA299-D80C-4C46-BED1-B0D0986FDD22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore2023.BL", "..\BookStore2023.BL\BookStore2023.BL.csproj", "{8F2E9F11-B30F-4591-BF9E-D4FB5400C561}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.BL", "..\BookStore2023.BL\BookStore.BL.csproj", "{8F2E9F11-B30F-4591-BF9E-D4FB5400C561}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore2023.DL", "..\BookStore2023.DL\BookStore2023.DL.csproj", "{EA597617-75DB-4661-B277-D124C540F74D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.DL", "..\BookStore2023.DL\BookStore.DL.csproj", "{EA597617-75DB-4661-B277-D124C540F74D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore2023.Models", "..\BookStore2023.Models\BookStore2023.Models.csproj", "{486B7490-7FA2-4974-ABB1-D33AF22CF98B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Models", "..\BookStore2023.Models\BookStore.Models.csproj", "{486B7490-7FA2-4974-ABB1-D33AF22CF98B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
