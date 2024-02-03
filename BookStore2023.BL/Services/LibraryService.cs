@@ -33,5 +33,12 @@ namespace BookStore.BL.Services
 
             return response;
         }
+        public int CheckBookCount(int input)
+        {
+            if (input < 1)
+                return 0;
+            var BookCount = _bookService.GetAll();
+            return BookCount.Count()+input;
+        }
     }
 }
