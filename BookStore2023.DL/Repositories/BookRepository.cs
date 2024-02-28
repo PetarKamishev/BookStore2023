@@ -4,7 +4,7 @@ using BookStore.Models.Models;
 
 namespace BookStore.DL.Repositories
 {
-    public class BookRepository : IBookRepository
+    public class BookRepository //: IBookRepository
     {
         public List<Book> GetAll()
         {

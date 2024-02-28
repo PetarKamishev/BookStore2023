@@ -12,37 +12,34 @@ namespace BookStore.BL.Services
         {
             _bookRepository = bookRepository;
         }
-        public List<Book> GetAll()
+        public async Task<List<Book>> GetAll()
         {
-            return _bookRepository.GetAll();
+            return await _bookRepository.GetAll();
         }
 
-        public Book GetById(int id)
+        public async Task<Book> GetById(int id)
         {
-            if (id <= 0) return new Book();
-
-            return _bookRepository.GetById(id);
+           return await _bookRepository.GetById(id);
         }
 
-        public void Add(Book book)
+        public async Task Add(Book book)
         {
-            _bookRepository.Add(book);
+           await _bookRepository.Add(book);
         }
 
-        public void Remove(int id)
+        public async Task Remove(int id)
         {
-           _bookRepository.Remove(id);
+            await _bookRepository.Remove(id);
         }
 
-        public List<Book> GetAllByAuthorAfterReleaseDate
+        public Task<List<Book>> GetAllByAuthorAfterReleaseDate
             (int authorId, DateTime afterDate)
         {
-            var result =
-                _bookRepository.GetAllByAuthor(authorId);
 
-            return result
-                .Where(b => b.ReleaseDate >= afterDate)
-                .ToList();
+            return null; //_bookRepository.GetAllByAuthor(authorId).Where(b => b.ReleaseDate >= afterDate).ToList();
+
+            
+                
         }
     }
 }
