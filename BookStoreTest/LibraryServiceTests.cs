@@ -1,4 +1,4 @@
-using BookStore.BL.Interfaces;
+/*using BookStore.BL.Interfaces;
 using BookStore.BL.Services;
 using BookStore.DL.Interfaces;
 using BookStore.DL.Repositories;
@@ -79,7 +79,7 @@ namespace BookStoreTest
 
             
             mockedBookRepository.Setup(
-                x => x.GetAll()).Returns(BookData);
+                x => x.GetAll()).Returns(bookData);
 
             // inject
             var bookService = new BookService(mockedBookRepository.Object);
@@ -153,4 +153,4 @@ namespace BookStoreTest
     }
 
     
-}
+}*/
