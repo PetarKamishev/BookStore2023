@@ -33,28 +33,28 @@ namespace BookStore.DL.MemoryDb
             {
                 new Book()
                 {
-                    Id = 1,
+                    Id = Guid.NewGuid(),
                   Title = "Book 1",
                   AuthorId = 1,
                   ReleaseDate = new DateTime(2005,05,07)
                 },
                 new Book()
                 {
-                    Id = 4,
+                    Id = Guid.NewGuid(),
                     Title = "Book 4",
                     AuthorId = 1,
                     ReleaseDate = new DateTime(2007,05,07)
                 },
                 new Book()
                 {
-                    Id = 2,
+                    Id = Guid.NewGuid() ,
                     Title = "Book 2",
                     AuthorId = 2,
                     ReleaseDate = new DateTime(2015,05,07)
                 },
                 new Book()
                 {
-                    Id = 3,
+                    Id = Guid.NewGuid(),
                   Title = "Book 3",
                   AuthorId = 3,
                   ReleaseDate = new DateTime(2010,05,07)

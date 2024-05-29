@@ -1,13 +1,19 @@
-﻿namespace BookStore.Models.Models
+﻿using MessagePack;
+using System.ComponentModel.DataAnnotations;
+using KeyAttribute = MessagePack.KeyAttribute;
+
+namespace BookStore.Models.Models
 {
+    [MessagePackObject]
     public class Book
     {
-        public int Id { get; set; }
-
+        [Key (0)]
+        public Guid Id { get; set; }
+        [Key (1)]
         public string Title { get; set; } = string.Empty;
-
+        [Key (2)]
         public int AuthorId { get; set; }
-
+        [Key (3)]
         public DateTime ReleaseDate { get; set; }
     }
 }

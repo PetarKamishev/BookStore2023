@@ -7,11 +7,11 @@ namespace BookStore.DL.Interfaces
     {
         Task<List<Book>> GetAll();
 
-        Task<Book> GetById(int id);
+        Task<Book> GetById(Guid id);
 
         public Task Add(Book book);
 
-        public Task Remove(int  id);
+        public Task Remove(Guid  id);
 
         Task<List<Book>> GetAllByAuthor(int authorId);
     }

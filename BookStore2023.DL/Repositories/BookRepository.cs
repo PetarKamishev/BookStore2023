@@ -11,7 +11,7 @@ namespace BookStore.DL.Repositories
             return InMemoryDb.BookData;
         }
 
-        public Book GetById(int id)
+        public Book GetById(Guid id)
         {
             return InMemoryDb.BookData
                 .First(a => a.Id == id);
@@ -22,7 +22,7 @@ namespace BookStore.DL.Repositories
             InMemoryDb.BookData.Add(author);
         }
 
-        public void Remove(int id)
+        public void Remove(Guid id)
         {
             var author = GetById(id);
             InMemoryDb.BookData.Remove(author);
