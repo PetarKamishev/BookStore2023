@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.4.0" />
     <PackageReference Include="FluentAssertions" Version="6.12.0" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="6.0.26" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />

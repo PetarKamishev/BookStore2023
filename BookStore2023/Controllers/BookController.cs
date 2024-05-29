@@ -26,9 +26,9 @@ namespace BookStore.Controllers
         }
 
         [HttpGet("GetById")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
-            if (id < 0) return BadRequest(id);
+            if (id.Equals(0)) return BadRequest(id);
 
             var result = await _bookService.GetById(id);
             return result != null ? Ok(result) : NotFound(id);
@@ -44,9 +44,9 @@ namespace BookStore.Controllers
         }
 
         [HttpDelete("Delete")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            if(id < 0) return BadRequest(id);
+            if(id.Equals(0)) return BadRequest(id);
             await _bookService.Remove(id);
             return Ok();
         }

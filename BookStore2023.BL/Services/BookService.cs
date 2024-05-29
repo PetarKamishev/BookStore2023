@@ -17,7 +17,7 @@ namespace BookStore.BL.Services
             return await _bookRepository.GetAll();
         }
 
-        public async Task<Book> GetById(int id)
+        public async Task<Book> GetById(Guid id)
         {
            return await _bookRepository.GetById(id);
         }
@@ -27,7 +27,7 @@ namespace BookStore.BL.Services
            await _bookRepository.Add(book);
         }
 
-        public async Task Remove(int id)
+        public async Task Remove(Guid id)
         {
             await _bookRepository.Remove(id);
         }

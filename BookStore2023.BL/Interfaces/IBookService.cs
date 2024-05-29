@@ -6,11 +6,11 @@ namespace BookStore.BL.Interfaces
     {
         Task<List<Book>> GetAll();
 
-        Task<Book> GetById(int id);
+        Task<Book> GetById(Guid id);
 
         Task Add(Book book);
 
-        Task Remove(int id);
+        Task Remove(Guid id);
 
         public Task<List<Book>>
             GetAllByAuthorAfterReleaseDate(
